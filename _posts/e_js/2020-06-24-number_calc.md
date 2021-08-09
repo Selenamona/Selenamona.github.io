@@ -1,12 +1,12 @@
 ---
 layout:     post
 title:     数字相加的精读问题 -number
-summary:  
+summary:
 categories: Js
 technique: true
 ---
 
- 
+
 `0.1 + 0.2 // 0.30000000000000004`
 
 将 0.1 和 0.2 换成二进制表示：
@@ -34,13 +34,13 @@ console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
 // 最小值
 const MinNumber = -(Math.pow(2, 53) - 1);
 console.log(MinNumber); // -9007199254740991
-console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991 
+console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991
 ```
 
 ## | 解决办法
 
 **numObj.toFixed(digits)**
- 
+
 - digits：小数点后数字的个数；介于 0 到 20 （包括）之间，实现环境可能支持更大范围。如果忽略该参数，则默认为 0
 - toFixed() 得出的结果是 String 类型
 
@@ -49,11 +49,11 @@ console.log(1.0 - 0.9); // 0.09999999999999998
 console.log(0.3 / 0.1); // 2.9999999999999996
 console.log(9.7 * 100); // 969.9999999999999
 console.log(2.22 + 0.1); // 2.3200000000000003
-// 使用 toFixed()： 
-parseFloat((1.0 - 0.9).toFixed(10)); // 0.1   
-parseFloat((0.3 / 0.1).toFixed(10)); // 3  
+// 使用 toFixed()：
+parseFloat((1.0 - 0.9).toFixed(10)); // 0.1
+parseFloat((0.3 / 0.1).toFixed(10)); // 3
 parseFloat((9.7 * 100).toFixed(10)); // 970
-parseFloat((2.22 + 0.1).toFixed(10)); // 2.32 
+parseFloat((2.22 + 0.1).toFixed(10)); // 2.32
 
 parseFloat(1.005.toFixed(2)) // 1
 ```
@@ -66,7 +66,7 @@ parseFloat(1.005.toFixed(2)) // 1
 ```javascript
 /**
  * @name 检测数据是否超限
- * @param {Number} number 
+ * @param {Number} number
  */
 const checkSafeNumber = (number) => {
   if (number > Number.MAX_SAFE_INTEGER || number < Number.MIN_SAFE_INTEGER) {
@@ -108,7 +108,7 @@ const multiplication = (arg1, arg2) => {
   const baseNum = digitLength(arg1) + digitLength(arg2);
   const result = floatToInt(arg1) * floatToInt(arg2);
   checkSafeNumber(result);
-  return result / Math.pow(10, baseNum); 
+  return result / Math.pow(10, baseNum);
 };
 
 console.log('------\n乘法：');
@@ -198,7 +198,7 @@ console.log(round(1.335, 2)); // 1.34
 
 console.log(-round(2.5, 0)); // -3
 console.log(-round(20.51, 0)); // -21
- 
+
 ```
 
 ***框架***
