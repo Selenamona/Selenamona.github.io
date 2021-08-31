@@ -18,6 +18,7 @@ readPdf () {
       const filePath = res.tempFilePath
       wx.openDocument({
         filePath: filePath,
+        showMenu: true,// 显示右上角菜单,设置此项可以发送给朋友/收藏
         success: function (res) {
           console.log('打开文档成功')
         }
