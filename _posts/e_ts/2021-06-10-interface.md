@@ -6,6 +6,9 @@ categories: Ts
 technique: true
 ---
 
+接口用法：
+1. 方法参数的类型声明
+2. implements 实现方法
 
 # | 接口 Interfaces
 
@@ -160,7 +163,7 @@ let tom: Person = {
 
 上例中，任意属性的值允许是 string，但是可选属性 age 的值却是 number，number 不是 string 的子属性，所以报错了。
 
-另外，在报错信息中可以看出，此时 { name: 'Tom', age: 25, gender: 'male' } 的类型被推断成了 { [x: string]: string \| number; name: string; age: number; gender: string; }，这是联合类型和接口的结合。
+另外，在报错信息中可以看出，此时 { name: 'Tom', age: 25, gender: 'male' } 的类型被推断成了 { [x: string]: string | number; name: string; age: number; gender: string; }，这是联合类型和接口的结合。
 
 #### 只读属性
 
