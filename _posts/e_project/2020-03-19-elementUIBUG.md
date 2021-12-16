@@ -31,3 +31,13 @@ technique: true
 // input 反显后无法删除修改
 // v-model 使用data函数里双向数据绑定的变量，不要使用类似this.rules.a这样的变量
 ```
+
+
+## | 表格疯狂抖动
+
+```javascript
+// 解决 el-table 页面缩放90%，表格抖动原因：1.是页面出现重绘 2.正好卡在要出滚动条的那个点
+.el-table {
+  width: 99.9% !important;
+}
+```
