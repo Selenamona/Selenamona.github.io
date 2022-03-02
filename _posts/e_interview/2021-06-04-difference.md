@@ -1,9 +1,3 @@
-<!--
- * @Descripttion:
- * @Author: Mona
- * @Date: 2021-06-04 15:14:46
- * @LastEditTime: 2021-06-04 15:53:26
--->
 ---
 layout: post
 title: 面试题类型之区别篇
